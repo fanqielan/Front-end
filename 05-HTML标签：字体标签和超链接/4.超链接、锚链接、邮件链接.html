@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.超链接、锚链接、邮件链接</title>
+    <base href="/">
+    <style>
+        div.content{
+            height: 380px;
+        }
+    </style>
+</head>
+<body>
+    <a name="top-anchor">我是天花板啦~</a>
+    <hr/>
+    name是html4.0以前使用的，id是html5.0后开始的，为了兼容，两者都要写，值要相同
+    <hr/>
+    <h3>1.外部链接：链接到外部文件</h3>
+    哈哈，我想去看看前面几节学了啥：<a href="./1.特殊字符.html">点击打开1.特殊字符.html</a>
+    <br />
+    真的不想再看看其它的吗：<a href="./2.下划线、中划线、斜体.html">点击打开2.下划线、中划线、斜体.html</a>
+    <br />
+    还有我！还有我~：<a href="./3.废弃标签.html">点击打开3.废弃标签.html</a>
+    <br />
+    除了打开同路径的文件，还可以打开网页奥~：
+    <a href="https://github.com/zerozerochen/Front-end/wiki" target="_blank">点击打开我的github仓库的wiki</a>
+
+    <hr/>
+
+    <h3>2.锚链接：设置结点，飞来飞去！</h3>
+    使用锚点，用name 或 id 给某个标签设置下位置，然后再飞过去！
+    ---->注意：比如使用#进行锚点定位，不然会跳到xxx文件或xxx文件夹内
+
+    <hr/>
+
+    <h3>3.邮件链接：嘿嘿嘿，没啥用咯</h3>
+    利用a标签中的href直接跳转到邮箱: <a href="google@gmail.com">打开我的谷歌邮箱吧</a>
+    <p>举个例子：超链接的各种属性</p>
+    href跳转的目标URL：<a href="#">打开根目录</a> <br/>
+    title:悬停文本：<a title="我是悬停文本" href="#">我就是空的悬停a标签</a> <br />
+    target：新页面跳转方式：<a href="#" target="_blank">点击我在新页面打开链接</a><br />
+    target：父页面跳转方式：<a href="#" target="_parent">点击我在父页面打开链接</a><br />
+    target：顶级窗口跳转方式：<a href="#" target="_top">点击我在顶级窗口页面打开链接</a><br />
+
+    ps：a标签的语义小于p标签，若一个p标签（段落）内的文字都是能够被点击，就是p>a
+    <br/>举个例子：<p><a href="" target="_blank">这是一个关于p标签和a标签的有趣的故事的段落！</a></p>
+
+    <br />
+    <div class="content"></div>
+    <a href="#top-anchor">我是网页的尾巴啦！</a><br>
+</body>
+</html>
