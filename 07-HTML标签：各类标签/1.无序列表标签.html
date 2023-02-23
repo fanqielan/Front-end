@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.无序列表标签</title>
+    <style>
+        li.inherit{
+            list-style-position:inherit;
+        }
+        li.outside{
+            list-style-position:outside;
+        }
+        li.inside{
+            list-style-position:inside;
+        }
+        ul.mac{
+            margin: 0 -9px;
+            width: auto;
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            -webkit-user-select: none;
+            user-select: none;
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>1.无序列表</h3>
+    <p>2.1 ul：有序列表、li：列表项（容器级）</p>
+    <p>2.2 li不能单独存在，比如在ul内，即ul的儿子只能是li</p>
+    <p>2.3 ul的作用：给li增加无序列表的语义</p>
+    *举个例子： <br />
+    <ul>无序列表
+        <li class="inherit">列表项1</li>
+        <li class="inherit">列表项2</li>
+        <li class="inherit">列表项3</li>
+    </ul>
+    <hr />
+    <p>2.4 type：属性值</p>
+    <p>2.5 disc：实心圆点（默认）、square：实心方点、circle：空心圆</p>
+    *举个例子： <br />
+    <ul type="disc">disc：实心圆点
+        <li class="outside">黑圆圆</li>
+        <li class="inside">黑圆圆</li>
+        <li class="inherit">黑圆圆</li>
+    </ul>
+    <ul type="square">square：实心方点
+        <li>方块块</li>
+        <li>方块块</li>
+        <li>方块块</li>
+    </ul>
+    <ul type="circle">circle：空心圆
+        <li>空圆圆</li>
+        <li>空圆圆</li>
+        <li>空圆圆</li>
+    </ul>
+    <hr />
+
+    <h3>2.li标签的补充（容器、嵌套）</h3>
+    <p>2.1 除了ul有type属性，li也可以有</p>
+    *举个栗子：<br/>
+    <ul type="circle">空圆圆无序ul：
+        <li type="disc">黑圆圆</li>
+        <li type="square">方块快</li>
+        <li type="circle">空圆圆</li>
+    </ul>
+    <p>2.2 嵌套用法：li是容器级！容器级！容器级！</p>
+    *举个栗子1：<br/>
+    <li type="square">黑方块
+        <ul type="circle">无序空圆圆
+            <li type="square">内容1</li>
+            <li type="disc">内容2</li>
+            <li >内容3</li>
+        </ul>
+    </li>
+    *举个栗子2：<br/>
+    <li><b>江苏省</b>
+        <ul type="circle">栖霞区
+            <li>南京师范大学</li>
+            <li>仙林大学城</li>
+            <li>南京师范大学</li>
+        </ul>
+    </li>
+    <hr/>
+    *li的css3属性:list-style-position <br/>
+    <p>inside: 列表项目标记放置在文本以内，且环绕文本根据标记对齐。</p>
+    <p>outside: 默认值。保持标记位于文本的左侧。列表项目标记放置在文本以外，且环绕文本不根据标记对齐。</p>
+    <p>inherit: 规定应该从父元素继承 list-style-position 属性的值。</p>
+    <hr/>
+
+    <h3>3.ul标签应用场景：</h3>
+    <ul class="mac">apple
+        <li>商店</li>
+        <li>Mac</li>
+        <li>iPad</li>
+        <li>iPhone</li>
+        <li>Watch</li>
+    </ul>
+</body>
+</html>

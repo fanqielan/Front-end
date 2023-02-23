@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.有序列表标签</title>
+    <style>
+        li.wear{
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <h3>1.有序列表ol</h3>
+    <p>1.1 ol标签：里面的每一项都是li</p>
+    *举个栗子：Ordered List <br />
+    <ol>有序列表ol
+        <li>有序内容1</li>
+        <li>有序内容2</li>
+        <li>有序内容3</li>
+    </ol>
+    <hr />
+    <p>1.2 type属性：1、a、A、i、l</p>
+    <p>1.3 结合start属性：可以控制从几开始！</p>
+    *举个栗子：1、a、A、i、l
+    <ol type="1">ol的type=1(默认)
+        <li>111</li>
+        <li class="wear">222</li>
+        <li>333</li>
+    </ol>
+    <ol type="a">ol的type=a
+        <li>aaa</li>
+        <li class="wear">bbb</li>
+        <li>ccc</li>
+    </ol>
+    <ol type="A" start="2">ol的type=A，start=2
+        <li>BBB</li>
+        <li>CCC</li>
+        <li class="wear">DDD</li>
+    </ol>
+    <hr />
+    <ol type="i" start="3">ol的type=i
+        <li>iii</li>
+        <li>iV</li>
+        <li>V</li>
+    </ol>
+    <ol type="I" start="10">ol的type=I
+        <li class="wear">X</li>
+        <li>XI</li>
+        <li class="wear">XII</li>
+    </ol>
+    <hr />
+
+    <h3>2.补充说明</h3>
+    <p>ol和ul一样，都可以嵌套，但是2者语义不同</p>
+    <p>ol里面只能是li，li（容器级）必须被包裹其中</p>
+    * 一般都是用ul来替代ol，举个栗子：<br />
+    <ul>
+        <li>1. iphone</li>
+        <li>2. oppo</li>
+        <li>3. vivo</li>
+    </ul>
+</body>
+</html>
