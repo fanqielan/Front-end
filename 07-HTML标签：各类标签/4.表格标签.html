@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.表格标签</title>
+</head>
+<body>
+    <h3>1.table表格</h3>
+    <p>1.1 表格由行tr组成，行tr由td组成</p>
+    * 举个栗子
+    <table>
+        <tr>
+            <td>草莓</td>
+            <td>红色</td>
+            <td>小黑点</td>
+        </tr>
+
+        <tr>
+            <td>西瓜</td>
+            <td>绿色</td>
+            <td>小文条</td>
+        </tr>
+    </table>
+    <hr />
+    <p>1.2 table表格属性</p>
+    (1) border边框：px；
+    <table border="1px">
+        <tr>
+            <td>冰淇淋</td>
+            <td>甜筒</td>
+            <td>雪糕</td>
+        </tr>
+    </table>
+    <br />
+    (2) style="border-collapse:collapse;"
+    <br />
+    (2.1) 单元格的线和表格的边框线合并:
+    <table border="1px" style="border-collapse:collapse;">
+        <tr>
+            <td>冰淇淋</td>
+            <td>甜筒</td>
+            <td>雪糕</td>
+        </tr>
+    </table>
+    <br />
+    (3) 表格的width(200px)宽度、height(60px)高度:
+    <table border="1px" style="border-collapse:collapse;" width="200px" height="60px">
+        <tr>
+            <td>冰淇淋</td>
+            <td>甜筒</td>
+            <td>雪糕</td>
+        </tr>
+    </table>
+    <br />
+    (4) 表格的bordercolor表格的边框颜色，align水平对齐方式
+    <br /> * left、right、center[√]
+    <br/>&nbsp;&nbsp;此处align是表格的外部对于website的对齐方法，内部靠td设置
+    <table border="1px" style="border-collapse:collapse;"
+        width="200px" height="60px" bordercolor="orange" align="center">
+        <tr>
+            <td>冰淇淋</td>
+            <td>甜筒</td>
+            <td>雪糕</td>
+        </tr>
+    </table>
+    <br />
+    (5) cellpadding:单元格内容到边的距离，px，默认0
+    <br>（5.1） 默认是到左边那条吧，仅一条，若dir="rtl"则为右边
+    <table border="1px"  width="300px" height="60px"
+    bordercolor="orange" cellpadding="10px" dir="rtl">
+        <tr>
+            <td>冰淇淋</td>
+            <td>甜筒</td>
+            <td>雪糕</td>
+        </tr>
+    </table>
+    (6) cellspacing: 单元格和单元格之间的距离（外边距），px，默认0
+    <br/> * 在html4.0已经废弃，html5.0中用css3
+    <table border="1px" width="300px" height="60px"
+        bordercolor="orange" cellpadding="10px" dir="rtl"
+        cellspacing="10px">
+
+        <tr>
+            <td>冰淇淋</td>
+            <td>甜筒</td>
+            <td>雪糕</td>
+        </tr>
+    </table>
+    (7) 表格的背景颜色：bgcolor="#99cc66"
+    <table bgcolor="#99cc66"
+    border="1px" style="border-collapse:collapse;"
+        width="200px" height="60px">
+        <tr>
+            <td>巧克力</td>
+            <td>巧乐兹</td>
+            <td>费列罗</td>
+        </tr>
+    </table>
+    (8) 表格的背景图片：background=src
+    <table background="https://raw.githubusercontent.com/cicyic/cdn/prehub/img/ali.jpg"
+        border="1px" style="border-collapse:collapse;"
+        width="200px" height="60px">
+        <tr>
+            <td>巧克力</td>
+            <td>巧乐兹</td>
+            <td>费列罗</td>
+        </tr>
+    </table>
+    (9) bordercolorlight:表格上、左边框，及单元格右下框颜色
+    <br />
+    * bordercolordark:表格右、下框，及单元格上、左边框颜色
+    <br />
+    ** 两个属性是为了让颜色形成差异，设置3D效果
+    <br />
+    *** 在html4.0中废弃，html5.0中完全移除
+    <table border="1px"
+        width="200px" height="60px" bordercolorlight="#DC143C"
+        bordercolordark="#99cc66">
+        <tr>
+            <td>西瓜</td>
+            <td>黑瓜子</td>
+            <td>红肉肉</td>
+        </tr>
+        <tr>
+            <td>葡萄</td>
+            <td>酸酸的</td>
+            <td>黑紫色</td>
+        </tr>
+    </table>
+    （10）dir 公有属性，单元格内容的排列方式
+    <br/> * 默认：left to right:ltr,也可以为rtl
+    <br> ** 把该属性放在任意标签中，表明该标签的位置may从右开始排列
+</body>
+</html>
