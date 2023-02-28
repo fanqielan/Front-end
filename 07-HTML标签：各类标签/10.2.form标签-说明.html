@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.2form标签说明</title>
+</head>
+<body>
+    <h3>1.表单from标签，用于服务器交互</h3>
+    <p>表单是收集和提供用户填写信息和选择的</p>
+    <h3>2.method,表单的提交一般为：get | post</h3>
+    <font size="4">
+        [get 以 name=value提交，两者间用？间隔，每个表单的name=value用&间隔，
+        缺点：只适合少量信息提交，且不太安全，数据类型仅限ASCII字符]
+        <br />
+        [post 以 发送（隐藏）到action指定的处理程序后面，两者间用？间隔，
+        发生的数据不可见！Action指定处理程序可以获取到表单数据
+        <br />
+        优点：可以提交海量数据，相对安全（get），格式多样化：Word、Excel、rar、img]
+    </font>
+    <br />
+    <h3>3.[一般都是login.php进行表单数据的处理]</h3>
+    <hr />
+    <h3>4.表单的编码方式：Enctype：</h3>
+    <font size="4">
+        取值：application/x-www-form-urlencoded、multipart/form-data。
+        <br />
+        缺点：只能在POST方式使用！
+        <br />
+        application/x-www-form-urlencoded：默认加密方式，除了上传文件外的数据都可以！
+        <br />
+        multipart/form-data：上传附件时，必须使用这种编码方式！
+    </font>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.表单标签</title>
+</head>
+<body>
+    <h3>1.各类文本框+属性说明+举例</h3>
+    <form name="individual_message" id="individual_message"
+        action="login.php" method="post">
+        1.文本框：<input type="text" placeholder="text_block">
+        <br/>
+        2.密码框：<input type="password" placeholder="password">
+        <br/>
+        3.单选按钮：可爱<input type="radio" name="key">无聊<input type="radio" name="key">
+        <br/>
+        __属性值：checked
+        <br />
+        4.多选按钮：昨天<input type="checkbox" name="more">今天<input type="checkbox" name="more">明天<input type="checkbox" name="more">
+        <br />
+        5.隐藏框：不喜欢用户看见的信息(2个text)
+        <input type="text" placeholder="我会隐身">
+        <input type="text" placeholder="我会隐身" hidden>
+        <br />
+        6.普通按钮：<input type="button">
+        <br />
+        __说明：自带“提交”文字，按下后传送当前form数据给服务器或其它程序处理
+        <br />
+        提交位置为：form的action属性指定的页面
+        <br />
+        7.提交按钮：<input type="submit">
+        <br />
+        8.重置按钮：清空form内容，恢复default设置
+        <input type="reset">
+        <br />
+        __说明：和提交按钮的功能一模一样，只不过这个图片按钮可以显示图片
+        <br />
+        9.image按钮：<input type="image" width="40px" height="20px"
+        src="https://raw.githubusercontent.com/cicyic/cdn/prehub/img/adress.png">
+        <br />
+        __说明：若要限制上传文件类型，需要JS配合
+        <br />
+        上传文件的安全检测：1、扩展名；2、文件数据内容
+        <br />
+        10.file：文件选择框：<input type="file">
+        <br />
+    </form>
+
+    <h3>2.其它可选属性+举例</h3>
+    <form name="_message" id="_message"
+        action="login.php" method="post">
+        1.带内容value、size（字符）
+        <br />
+        readonly（只读，IE可以点击，Google不行）、disabled（文本只读，不能编辑）
+        <br />
+        <input type="text" value="我有默认填充内容啦~">
+    </form>
+
+    <h3>3.个人注册&reg;举例</h3>
+    <form name="_message" id="_message" action="login.php" method="post">
+        昵称：<input type="text" placeholder="禾木在分析" size="20">
+        <br />
+        用户名：<input type="text" value="bili_282828" readonly size="20">
+        <br />
+        密码：<input type="password" size="20">
+        <br />
+        我的签名：<input type="text" size="50" value="生活晴朗、万物可爱(*╹▽╹*)">
+        <br />
+        性别：男<input type="checkbox">&nbsp;女<input type="checkbox">&nbsp;保密<input type="checkbox">
+        <br />
+        出生日期：<input type="date">
+        <br />
+
+    </form>
+
+</body>
+</html>
