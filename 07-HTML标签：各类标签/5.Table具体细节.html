@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.table细节</title>
+</head>
+<body>
+    <h3>1.tr标签：行组成了表格</h3>
+    (1)属性：dir：ltr、rtl; height;
+    <br/>（水平对齐）align:left、right、center;
+    <br />（垂直对齐）valign:top、middle、bottom
+    <br/>
+    * bgcolor:设置这一行单元格的背景色 <br />
+    ** 没有background属性，无法用html设置这一行的背景图片，<br />
+    *** 若一定要实现，可以借助css实现
+
+    <hr />
+    <h3>2.td标签：列单元格</h3>
+    （2）属性：<br />
+    * align:left、right、center；
+    <br/>
+    * valign:top、middle、bottom；
+    <br /> &nbsp;&nbsp;&nbsp;以后均用css来显示
+    <br />
+    ** width:绝对值或相对值（100%）<br />
+    ** height：单元格高度<br />
+    ** bgcolor：单元格背景<br />
+    ** background：单元格背景图片<br />
+
+    <h3>3.单元格的合并</h3>
+    （3）colspan：横向合并，如colspan=2，当前单元格占水平两个单元格位置
+    <br /> *rowspan:纵向合并，rowspan=2,当前单元格垂直占两个单元格
+    <p>例子1：横向合并+th加粗单元格</p>
+    <table border="1" style="border-collapse:collapse;"
+        width="200px" height="80px">
+        <tr align="center">
+            <td>仙女</td>
+            <td>18</td>
+            <td>女</td>
+            <td>云顶天宫</td>
+        </tr>
+        <tr align="center">
+            <td>土狗</td>
+            <td>88</td>
+
+            <th colspan="2">村前树洞</th>
+        </tr>
+    </table>
+
+    <hr/>
+
+    <p>例子2：纵向合并+th加粗单元格</p>
+    <table border="1px" style="border-collapse:collapse;"
+        width="200px" height="80px;">
+        <tr align="center" valign="center">
+            <td>仙女</td>
+            <td>18</td>
+            <td>女</td>
+            <th rowspan="2">云顶天宫</th>
+        </tr>
+        <tr>
+            <td>土狗</td>
+            <td>88</td>
+            <td>男</td>
+        </tr>
+    </table>
+
+    <h3>4.单元格标题</h3>
+    * 同样的：align：left、center、right、top、bottom
+    <table border="1px" style="border-collapse:collapse;"
+        width="300px" height="100px">
+        <tr>
+            <caption align="center">表格的标题奥~</caption>
+            <td>学院</td>
+            <td>信息工程学院</td>
+            <td>文学院</td>
+        </tr>
+        <tr>
+            <td>定位</td>
+            <td>相对定位</td>
+            <td>绝对定位</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h3>5.三大标签（thead、tbody、tfoot）</h3>
+    * 代码摆放没有要求，但是读取按照head、body、foot顺序
+    <br />
+    ** 在写大内容的时候，可以使用，这样读取数据，边获取边显示
+    <br />
+    *** 若不写，数据全部加载完，才会显示表格
+    <table border="1px">
+        <tbody>
+            <tr>
+                <td>草莓</td>
+                <td>水果</td>
+                <td>好吃☆☆☆☆</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>香蕉</td>
+                <td>水果</td>
+                <td>排毒☆☆</td>
+            </tr>
+        </tfoot>
+
+        <thead>
+            <tr>
+                <td>西红柿</td>
+                <td>蔬菜</td>
+                <td>爽口☆☆☆</td>
+            </tr>
+        </thead>
+    </table>
+
+</body>
+</html>

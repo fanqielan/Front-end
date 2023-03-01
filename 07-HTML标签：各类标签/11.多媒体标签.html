@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.多媒体标签</title>
+</head>
+<body>
+    <h3>1.多媒体：音频、视频、Flash（基本上都是该格式）</h3>
+    <p>.wmv、.dat、.mob、.rmvb等视频格式需要第三方插件才可以播放！！！</p>
+    <p>* 一般都是将普通格式用格式工厂转为flash格式，内存变小、兼容性变强</p>
+    <pre>
+        （1）IE：中生效 bgsound标签，Google内无效，所以不显示。
+        （2）loop=-1表示循环(其它正数表示播放次数)
+    </pre>
+    <bgsound loop="-1"
+    src="https://raw.githubusercontent.com/cicyic/cdn/prehub/music/龚明威 - Counting Stars - 小提琴版.mp3"></bgsound>
+
+    <h3>2.embed标签：主要应用于Netscape浏览器，不是W3C标准</h3>
+    <p>2.1 mp4、wav等，但不是支持全部：音频、视频等</p>
+    <pre>
+        （1）autostart="false",表示打开网页，禁止自动播放，默认为true
+        （2）volume：音量大小；width/height:宽高,不知道为啥不起作用
+        （3）quality: 播放Flash的质量，hight、low（高和低）
+        （4）wmode:指Flash的背景是否可以透明，transparent表示透明！
+    </pre>
+    <p>2.2 pluginspage:若指定的Flash插件不存在，则从该插件位置下载</p>
+    <embed src="https://raw.githubusercontent.com/cicyic/cdn/prehub/music/龚明威 - Counting Stars - 小提琴版.mp3"
+    type="mp3" loop="-1" autostart="false" quality="hight" volume="100" wmode="transparent">
+
+    <embed src="https://raw.githubusercontent.com/cicyic/cdn/prehub/video/xiamen.mp4"
+    type="mp4" loop="-1" autostart="false" quality="hight" volume="100" wmode="transparent">
+
+    <h3>3.video标签</h3>
+    <video src="https://raw.githubusercontent.com/cicyic/cdn/prehub/video/xiamen.mp4"
+    loop="-1" width="600px" height="300px" controls>
+    </video>
+    Mp3:
+    <video src="https://raw.githubusercontent.com/cicyic/cdn/prehub/music/龚明威 - Counting Stars - 小提琴版.mp3" loop="-1"
+        width="400px" height="30px" controls>
+    </video>
+
+    <h3>4.object标签：播放多媒体：音频、视频等</h3>
+    <p>主要应用于IE浏览器，W3C标准</p>
+    <pre>
+        （1）classid: 指定Flash插件的ID号，一般存在于注册表中
+        （2）codebase：如果Flash插件不存在，则从该插件指定的位置下载
+        （3）param：设置具体的详细参数
+    </pre>
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
+    width="778" height="202"
+    data="" type="">
+        <param name="moive" value="">
+        <param name="quality" value="high">
+        <param name="wmode" value="transparent">
+        <embed src="" type="application/x-shockwave-flash"
+        pluginspage="http://www.macromedia.com/go/getflashplayer"
+        wmode="transparent">
+    </object>
+</body>
+</html>

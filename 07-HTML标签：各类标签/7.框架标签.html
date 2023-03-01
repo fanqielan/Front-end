@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.框架标签</title>
+</head>
+<frameset rows="25%,60%,*">
+    <!-- 1.scrolling="no"，表格不需要滚动条，仅显示部分内容 -->
+    <frame src="./1.无序列表标签.html" scrolling="true" target="footer">顶部页面</frame>
+    <frameset cols="40%,*" frameborder="1">
+        <!-- 2.noresize，原本frame页面可以拖动大小，现在固定 -->
+        <!-- 3.brodercolor，框架边框的颜色，frameset也可以 -->
+        <!-- 但是仅在IE中生效，Google中无效 -->
+        <!-- 4.frameborder，0表示隐藏边框，1表示显示边框 (仅在framset中生效)-->
+        <!-- 5.name和target，跳转用 -->
+        <frame src="./2.有序列表标签.html" bordercolor="red"></frame>
+        <frame src="./6.框架知识.html" name="footer"></frame>
+    </frameset>
+    <frame>footer页</frame>
+</frameset>
+</html>
